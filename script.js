@@ -547,26 +547,20 @@ function contactForProduct() {
 
 // Contact functions
 function openSnapchat1() {
-    tg.openLink('https://www.snapchat.com/add/pfsrtr');
+    tg.openLink('https://www.snapchat.com/add/opp.777');
     showToast('📱 Ouverture de Snapchat...');
     if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
 }
 
 function openSnapchat2() {
-    tg.openLink('https://www.snapchat.com/add/prfsec');
+    tg.openLink('https://www.snapchat.com/add/opp.5999');
     showToast('📱 Ouverture de Snapchat...');
     if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
 }
 
-function openSignal() {
-    tg.openLink('https://signal.me/#eu/vGD3tpB0PRBb-dZdLmbDCVQi9Jm2a2UKSUnyGR5ZW2wyP-e3UUpNbJwTMkwi1nzX');
-    showToast('📱 Ouverture de Signal...');
-    if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
-}
-
-function openPotato() {
-    tg.openLink('https://dympt.org/Leprofesseur5962');
-    showToast('🥔 Ouverture du Canal Potato...');
+function openSnapchat3() {
+    tg.openLink('https://www.snapchat.com/add/opp.597');
+    showToast('📱 Ouverture de Snapchat...');
     if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
 }
 
