@@ -94,7 +94,9 @@ let adminCurrentCat = 'stup';
 let productsData = {
     stup: [],
     tabac: [],
-    puff: []
+    puff: [],
+    ballon: [],
+    alcool: []
 };
 
 async function loadProductsFromStorage() {
@@ -105,7 +107,9 @@ async function loadProductsFromStorage() {
             productsData = {
                 stup: data.stup || [],
                 tabac: data.tabac || [],
-                puff: data.puff || []
+                puff: data.puff || [],
+                ballon: data.ballon || [],
+                alcool: data.alcool || []
             };
         } else {
             initDefaultProducts();
@@ -137,7 +141,9 @@ function initDefaultProducts() {
     productsData = {
         stup: [],
         tabac: [],
-        puff: []
+        puff: [],
+        ballon: [],
+        alcool: []
     };
 }
 
@@ -146,6 +152,8 @@ function updateCategoryCounts() {
     document.getElementById('count-stup').textContent = productsData.stup.length;
     document.getElementById('count-tabac').textContent = productsData.tabac.length;
     document.getElementById('count-puff').textContent = productsData.puff.length;
+    document.getElementById('count-ballon').textContent = productsData.ballon.length;
+    document.getElementById('count-alcool').textContent = productsData.alcool.length;
 }
 
 // Loading Screen
@@ -663,6 +671,14 @@ function adminSwitchCat(category, button) {
 }
 
 function adminLoadProducts() {
+    // Mettre à jour les stats admin
+    document.getElementById('a-stup').textContent = productsData.stup.length;
+    document.getElementById('a-tabac').textContent = productsData.tabac.length;
+    document.getElementById('a-puff').textContent = productsData.puff.length;
+    document.getElementById('a-ballon').textContent = productsData.ballon.length;
+    document.getElementById('a-alcool').textContent = productsData.alcool.length;
+    document.getElementById('a-total').textContent = productsData.stup.length + productsData.tabac.length + productsData.puff.length + productsData.ballon.length + productsData.alcool.length;
+
     const list = document.getElementById('admin-products-list');
     const products = productsData[adminCurrentCat] || [];
     

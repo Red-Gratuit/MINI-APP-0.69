@@ -79,6 +79,16 @@
                         <span class="label">PUFF</span>
                         <span class="count" id="count-puff">0</span>
                     </button>
+                    <button class="category-btn" data-category="ballon" onclick="showProducts('ballon', event)">
+                        <span class="icon">🎈</span>
+                        <span class="label">BALLON</span>
+                        <span class="count" id="count-ballon">0</span>
+                    </button>
+                    <button class="category-btn" data-category="alcool" onclick="showProducts('alcool', event)">
+                        <span class="icon">🍾</span>
+                        <span class="label">ALCOOL</span>
+                        <span class="count" id="count-alcool">0</span>
+                    </button>
                 </div>
                 <div id="products-container" class="products-grid"></div>
             </div>
@@ -234,7 +244,7 @@
             </div>
 
             <!-- Stats -->
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:14px;">
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:14px;">
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
                     <div id="a-stup" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🌿 STUP</div>
@@ -248,6 +258,14 @@
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🍊 PUFF</div>
                 </div>
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+                    <div id="a-ballon" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+                    <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🎈 BALLON</div>
+                </div>
+                <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+                    <div id="a-alcool" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+                    <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🍾 ALCOOL</div>
+                </div>
+                <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
                     <div id="a-total" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">📦 Total</div>
                 </div>
@@ -258,6 +276,8 @@
                 <button class="admin-tab active" onclick="adminSwitchCat('stup',this)">🌿 STUP</button>
                 <button class="admin-tab" onclick="adminSwitchCat('tabac',this)">🚬 TABAC</button>
                 <button class="admin-tab" onclick="adminSwitchCat('puff',this)">🍊 PUFF</button>
+                <button class="admin-tab" onclick="adminSwitchCat('ballon',this)">🎈 BALLON</button>
+                <button class="admin-tab" onclick="adminSwitchCat('alcool',this)">🍾 ALCOOL</button>
             </div>
 
             <!-- Bouton ajouter -->
@@ -295,6 +315,8 @@
                             <button class="admin-select-btn active" data-cat="stup" onclick="selectCat(this)">🌿 STUP</button>
                             <button class="admin-select-btn" data-cat="tabac" onclick="selectCat(this)">🚬 TABAC</button>
                             <button class="admin-select-btn" data-cat="puff" onclick="selectCat(this)">🍊 PUFF</button>
+                            <button class="admin-select-btn" data-cat="ballon" onclick="selectCat(this)">🎈 BALLON</button>
+                            <button class="admin-select-btn" data-cat="alcool" onclick="selectCat(this)">🍾 ALCOOL</button>
                         </div>
                     </div>
 
