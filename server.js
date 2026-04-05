@@ -47,8 +47,8 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
         const file = req.file;
         const fileType = file.mimetype.startsWith('video/') ? 'video' : 'image';
         
-        // Construire l'URL publique
-        const publicUrl = `https://le-professeur-5962-production.up.railway.app/uploads/${fileType === 'video' ? 'videos' : 'images'}/${file.filename}`;
+        // Construire l'URL publique (relative, fonctionne sur n'importe quel domaine)
+        const publicUrl = `/uploads/${fileType === 'video' ? 'videos' : 'images'}/${file.filename}`;
         
         console.log(`✅ ${fileType} uploadé: ${file.filename}`);
         console.log(`📡 URL publique: ${publicUrl}`);

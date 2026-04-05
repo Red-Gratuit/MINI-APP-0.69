@@ -829,7 +829,7 @@ function handleFileUpload(input) {
         formData.append('file', file);
         
         // Upload vers le serveur
-        fetch('https://le-professeur-5962-production.up.railway.app/api/upload', {
+        fetch('/api/upload', {
             method: 'POST',
             body: formData
         })
