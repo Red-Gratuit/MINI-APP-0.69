@@ -170,7 +170,7 @@ window.addEventListener('load', () => {
         }, 500);
         
         createParticles();
-        showToast('🎉 Bienvenue sur Shop 0.9 59-62 !');
+        showToast('🎉 Bienvenue sur Shop 0.9 74700 !');
     }, 2000);
 });
 
@@ -239,11 +239,11 @@ document.addEventListener('click', function autoPlayMusic() {
 
 // Share app
 function shareApp() {
-    const shareText = '🔥 Découvrez Shop 0.9 59-62 ! Qualité premium, livraison rapide dans le 59/62 !';
+    const shareText = '🔥 Découvrez Shop 0.9 74700 ! Qualité premium, livraison rapide dans le 74700 !';
     
     if (navigator.share) {
         navigator.share({
-            title: 'Shop 0.9 59-62',
+            title: 'Shop 0.9 74700',
             text: shareText,
             url: window.location.href
         }).then(() => {
@@ -547,7 +547,7 @@ function contactForProduct() {
 
 // Contact functions
 function openSnapchat1() {
-    tg.openLink('https://www.snapchat.com/add/opp.777');
+    tg.openLink('https://www.snapchat.com/add/opp.7777');
     showToast('📱 Ouverture de Snapchat...');
     if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
 }
@@ -955,4 +955,4 @@ async function saveProduct() {
     }
 }
 
-console.log('🎓 Shop 0.9 59-62 - Version Ultra Premium chargée avec succès !');
+console.log('🎓 Shop 0.9 74700 - Version Ultra Premium chargée avec succès !');
