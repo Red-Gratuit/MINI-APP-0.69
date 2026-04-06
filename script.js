@@ -534,13 +534,13 @@ function contactForProduct() {
         buttons: [
             {id: 'snap1', type: 'default', text: '👻 Snap Principal'},
             {id: 'snap2', type: 'default', text: '👻 Snap Secours'},
-            {id: 'signal', type: 'default', text: '📱 Signal'},
+            {id: 'whatsapp', type: 'default', text: '📱 WhatsApp'},
             {id: 'cancel', type: 'cancel'}
         ]
     }, (buttonId) => {
         if (buttonId === 'snap1') openSnapchat1();
         if (buttonId === 'snap2') openSnapchat2();
-        if (buttonId === 'signal') openSignal();
+        if (buttonId === 'whatsapp') openWhatsApp();
         if (buttonId !== 'cancel') closeModal();
     });
 }
@@ -572,19 +572,23 @@ function orderNow() {
         buttons: [
             {id: 'snap1', type: 'default', text: '👻 Snap Principal'},
             {id: 'snap2', type: 'default', text: '👻 Snap Secours'},
-            {id: 'signal', type: 'default', text: '📱 Signal'},
-            {id: 'potato', type: 'default', text: '🥔 Canal Potato'}
+            {id: 'whatsapp', type: 'default', text: '📱 WhatsApp'}
         ]
     }, (buttonId) => {
         if (buttonId === 'snap1') openSnapchat1();
         if (buttonId === 'snap2') openSnapchat2();
-        if (buttonId === 'signal') openSignal();
-        if (buttonId === 'potato') openPotato();
+        if (buttonId === 'whatsapp') openWhatsApp();
     });
     
     if (tg.HapticFeedback && typeof tg.HapticFeedback.impactOccurred === 'function') {
         tg.HapticFeedback.impactOccurred('heavy');
     }
+}
+
+function openWhatsApp() {
+    tg.openLink('https://wa.me/33687388853');
+    showToast('📱 Ouverture de WhatsApp...');
+    if (tg.HapticFeedback && typeof tg.HapticFeedback.notificationOccurred === 'function') tg.HapticFeedback.notificationOccurred('success');
 }
 
 // Close app

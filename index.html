@@ -1,403 +1,806 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Shop 0.9 74700</title>
+
+    <title>Shop 0.9 59-62</title>
+
     <link rel="stylesheet" href="style.css">
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 </head>
+
 <body>
 
+
+
     <!-- Loading Screen -->
+
     <div id="loading-screen" class="loading-screen">
+
         <div class="loading-content">
+
             <img src="logo.jpg" alt="Logo" class="loading-logo">
+
             <h1 class="loading-title">Shop 0.9</h1>
-            <p class="loading-subtitle">74700</p>
+
+            <p class="loading-subtitle">59-62</p>
+
             <div class="loading-spinner"></div>
+
             <p class="loading-text">Chargement en cours...</p>
+
         </div>
+
     </div>
 
+
+
     <!-- Particles Background -->
+
     <div id="particles-bg" class="particles-bg"></div>
 
+
+
     <!-- ===== MINI APP PRINCIPALE ===== -->
+
     <div id="app" style="opacity:0;">
 
+
+
         <!-- Header -->
+
         <header>
+
             <div class="header-content">
+
                 <img src="logo.jpg" alt="Logo" class="header-logo" id="headerLogo">
+
                 <div class="header-text">
+
                     <h1 id="headerTitle">Shop 0.9</h1>
-                    <span class="header-subtitle">74700</span>
+
+                    <span class="header-subtitle">59-62</span>
+
                 </div>
+
             </div>
+
             <button class="music-toggle" onclick="toggleMusic()" id="musicBtn">🔇</button>
+
             <button class="share-btn" onclick="shareApp()">📤</button>
+
             <button class="close-btn" onclick="closeApp()">✕</button>
+
         </header>
 
+
+
         <!-- Toast -->
+
         <div id="toast" class="toast"></div>
 
+
+
         <!-- Pages -->
+
         <div class="swipe-container" id="swipe-container">
 
+
+
             <!-- PAGE MENU -->
+
             <div class="page active" data-page="menu">
+
                 <div class="banner">
+
                     <p id="bannerText">🚀 Livraisons rapides • 💎 Qualité premium • 🔒 Commandes sécurisées 24/7 • ⚡ Livraison express</p>
+
                 </div>
+
                 <div class="stats-bar">
+
                     <div class="stat-item">
+
                         <span class="stat-icon">👥</span>
+
                         <span class="stat-value">200+</span>
+
                         <span class="stat-label">Clients satisfaits</span>
+
                     </div>
+
                     <div class="stat-item">
+
                         <span class="stat-icon">⭐</span>
+
                         <span class="stat-value">4.9/5</span>
+
                         <span class="stat-label">Note moyenne</span>
+
                     </div>
+
                 </div>
+
                 <div class="category-buttons">
+
                     <button class="category-btn active" data-category="stup" onclick="showProducts('stup', event)">
+
                         <span class="icon">🌿</span>
+
                         <span class="label">STUP</span>
+
                         <span class="count" id="count-stup">0</span>
+
                     </button>
+
                     <button class="category-btn" data-category="tabac" onclick="showProducts('tabac', event)">
+
                         <span class="icon">🚬</span>
+
                         <span class="label">TABAC</span>
+
                         <span class="count" id="count-tabac">0</span>
+
                     </button>
+
                     <button class="category-btn" data-category="puff" onclick="showProducts('puff', event)">
+
                         <span class="icon">🍊</span>
+
                         <span class="label">PUFF</span>
+
                         <span class="count" id="count-puff">0</span>
+
                     </button>
+
                     <button class="category-btn" data-category="ballon" onclick="showProducts('ballon', event)">
+
                         <span class="icon">🎈</span>
+
                         <span class="label">BALLON</span>
+
                         <span class="count" id="count-ballon">0</span>
+
                     </button>
+
                     <button class="category-btn" data-category="alcool" onclick="showProducts('alcool', event)">
+
                         <span class="icon">🍾</span>
+
                         <span class="label">ALCOOL</span>
+
                         <span class="count" id="count-alcool">0</span>
+
                     </button>
+
                 </div>
+
                 <div id="products-container" class="products-grid"></div>
+
             </div>
+
+
 
             <!-- PAGE INFO -->
+
             <div class="page" data-page="info">
+
                 <div class="info-card animate-in">
+
                     <div class="info-icon">ℹ️</div>
+
                     <h2>Shop 0.9 — Commandes sécurisées</h2>
+
                     <div class="info-content">
+
                         <div class="info-highlight">
+
                             <p><strong>SUR PLACE 📍 / LIVRAISON 🚚 / MONDIAL RELAY 📦 / PRIX IMBATTABLE 💰</strong></p>
+
                         </div>
+
                         <h3>🕐 Horaires</h3>
+
                         <div class="feature-box">
-                            <p><strong>📍 Sur place :</strong> 10h - 00h</p>
-                            <p><strong>� Livraison :</strong> Bientôt disponible</p>
+
+                            <p><strong>⏰ Livraisons :</strong> 16h - 23h</p>
+
+                            <p><strong>📍 Sur place :</strong> 16h - 00h</p>
+
                         </div>
+
                         <h3>📦 Envoie Colis</h3>
+
                         <div class="feature-box">
+
                             <p>✅ Vérification d'identité</p>
+
                             <p>💳 Paiement : <strong>CASH, BTC...</strong></p>
+
                         </div>
+
                         <h3>📋 Informations requises</h3>
+
                         <div class="required-info">
+
                             <p>• Vérification d'identité (nouveaux clients)</p>
+
                             <p>• Adresse de livraison complète</p>
+
                             <p>• Disponibilités pour la réception</p>
+
                             <p>• Détails de votre commande</p>
+
                         </div>
+
                         <h3>🚚 Livraison</h3>
+
                         <div class="feature-box">
-                            <p>Disponible dans tout le 74700 🚀</p>
+
+                            <p>Disponible dans tout le 59/62 🚀</p>
+
                         </div>
+
                         <h3>⚡ Pourquoi nous ?</h3>
+
                         <div class="why-us-grid">
+
                             <div class="why-us-item"><span class="why-icon">🔒</span><p><strong>Discrétion</strong></p></div>
+
                             <div class="why-us-item"><span class="why-icon">⚡</span><p><strong>Rapidité</strong></p></div>
+
                             <div class="why-us-item"><span class="why-icon">💎</span><p><strong>Qualité</strong></p></div>
+
                             <div class="why-us-item"><span class="why-icon">🎯</span><p><strong>24/7</strong></p></div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
 
+
+
             <!-- PAGE CONTACT -->
+
             <div class="page" data-page="contact">
+
                 <div class="contact-card animate-in">
+
                     <h2>Contact</h2>
+
                     <p class="contact-subtitle">Contactez-nous via nos réseaux sécurisés.</p>
+
                     <div class="contact-buttons">
+
                         <button class="social-btn snapchat-btn" onclick="openSnapchat1()">
+
                             <span class="social-icon">👻</span>
-                            <div class="social-info"><div class="social-name">Snapchat</div><div class="social-label">PRINCIPAL - opp.7777</div></div>
+
+                            <div class="social-info"><div class="social-name">Snapchat</div><div class="social-label">PRINCIPAL - opp.777</div></div>
+
                             <span class="social-badge">En ligne</span>
+
                         </button>
+
                         <button class="social-btn snapchat-btn" onclick="openSnapchat2()">
+
                             <span class="social-icon">👻</span>
+
                             <div class="social-info"><div class="social-name">Snapchat</div><div class="social-label">SECOURS 1 - opp.5999</div></div>
+
                             <span class="social-badge">Disponible</span>
+
                         </button>
+
                         <button class="social-btn snapchat-btn" onclick="openSnapchat3()">
+
                             <span class="social-icon">�</span>
+
                             <div class="social-info"><div class="social-name">Snapchat</div><div class="social-label">SECOURS 2 - opp.597</div></div>
+
                             <span class="social-badge">Disponible</span>
+
                         </button>
-                        <button class="social-btn" style="opacity:0.5; cursor:default;">
+
+                        <button class="social-btn snapchat-btn" onclick="openWhatsApp()">
+
                             <span class="social-icon">📱</span>
-                            <div class="social-info"><div class="social-name">WhatsApp</div><div class="social-label">BIENTÔT DISPONIBLE</div></div>
-                            <span class="social-badge">Bientôt</span>
+
+                            <div class="social-info"><div class="social-name">WhatsApp</div><div class="social-label">06 87 38 88 53</div></div>
+
+                            <span class="social-badge">En ligne</span>
+
                         </button>
+
                     </div>
+
                     <div class="contact-footer">
+
                         <p>⚡ Réponse sous 5 minutes</p>
+
                         <p>🔒 Données sécurisées</p>
+
                     </div>
+
                 </div>
+
             </div>
+
+
 
         </div><!-- fin swipe-container -->
 
+
+
         <!-- Modal Produit -->
+
         <div id="product-modal" class="modal">
+
             <div class="modal-overlay" onclick="closeModal()"></div>
+
             <div class="modal-content">
+
                 <button class="modal-close" onclick="closeModal()">✕</button>
+
                 <button class="modal-favorite" onclick="toggleFavorite()" id="favoriteBtn">⭐</button>
+
                 <div id="modal-body"></div>
+
                 <div class="modal-actions">
+
                     <button class="btn-primary" onclick="contactForProduct()">📞 Contacter pour commander</button>
+
                 </div>
+
             </div>
+
         </div>
 
+
+
         <!-- Bottom Nav -->
+
         <nav class="bottom-nav">
+
             <button class="nav-btn active" data-page="menu" onclick="navigateToPage('menu', event)">
+
                 <span class="nav-icon">📱</span>
+
                 <span class="nav-label">Menu</span>
+
             </button>
+
             <button class="nav-btn" data-page="info" onclick="navigateToPage('info', event)">
+
                 <span class="nav-icon">ℹ️</span>
+
                 <span class="nav-label">Infos</span>
+
             </button>
+
             <button class="nav-btn" data-page="contact" onclick="navigateToPage('contact', event)">
+
                 <span class="nav-icon">👤</span>
+
                 <span class="nav-label">Contact</span>
+
             </button>
+
             <button class="nav-btn action-btn" onclick="orderNow()">
+
                 <span class="nav-icon">👍</span>
+
             </button>
+
             <button class="nav-btn admin-nav-btn" onclick="openAdmin()">
+
                 <span class="nav-icon">⚙️</span>
+
                 <span class="nav-label">Admin</span>
+
             </button>
+
         </nav>
+
+
 
     </div><!-- fin app -->
 
+
+
     <!-- ===== PANEL ADMIN (caché par défaut) ===== -->
+
     <div id="admin-panel" style="display:none; position:fixed; inset:0; background:#0a0e27; z-index:9999; overflow-y:auto;">
 
+
+
         <!-- ÉCRAN LOGIN -->
+
         <div id="admin-login-screen" style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; padding:30px; background: linear-gradient(135deg, #0a0e27, #1a0533);">
+
             <div style="text-align:center; margin-bottom:35px;">
+
                 <div style="font-size:65px; margin-bottom:15px;">🔐</div>
+
                 <h2 style="color:#8a2be2; font-size:24px; margin-bottom:8px; font-weight:bold;">Panel Admin</h2>
-                <p style="color:rgba(255,255,255,0.5); font-size:14px;">Shop 0.9 74700</p>
+
+                <p style="color:rgba(255,255,255,0.5); font-size:14px;">Shop 0.9 59-62</p>
+
             </div>
+
             <div style="width:100%; max-width:320px; display:flex; flex-direction:column; gap:12px;">
+
                 <input type="password" id="admin-pwd-input" placeholder="🔑 Mot de passe..." 
+
                     style="width:100%; padding:15px; background:rgba(255,255,255,0.08); border:2px solid rgba(138,43,226,0.4); border-radius:14px; color:#fff; font-size:16px; text-align:center; letter-spacing:3px; outline:none;"
+
                     onkeypress="if(event.key==='Enter') checkAdminPassword()">
+
                 <button onclick="checkAdminPassword()" 
+
                     style="width:100%; padding:15px; background:linear-gradient(135deg,#8a2be2,#5dade2); border:none; border-radius:14px; color:#fff; font-size:16px; font-weight:bold; cursor:pointer;">
+
                     🔓 Accéder au Panel
+
                 </button>
+
                 <button onclick="closeAdmin()" 
+
                     style="width:100%; padding:13px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:14px; color:rgba(255,255,255,0.6); font-size:14px; cursor:pointer;">
+
                     ✕ Annuler
+
                 </button>
+
             </div>
+
         </div>
 
+
+
         <!-- CONTENU ADMIN -->
+
         <div id="admin-main-content" style="display:none; padding-bottom:30px;">
 
+
+
             <!-- Header Admin -->
+
             <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:rgba(138,43,226,0.15); border-bottom:2px solid #8a2be2; position:sticky; top:0; z-index:10; backdrop-filter:blur(10px);">
+
                 <button onclick="closeAdmin()" style="background:rgba(138,43,226,0.3); border:none; color:#fff; padding:8px 14px; border-radius:10px; font-size:13px; cursor:pointer;">← Retour</button>
+
                 <h2 style="font-size:17px; color:#fff;">🎓 Panel Admin</h2>
+
                 <span style="background:#8a2be2; padding:4px 10px; border-radius:10px; font-size:11px; color:#fff;">v2.0</span>
+
             </div>
+
+
 
             <!-- Stats -->
+
             <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:14px;">
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-stup" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🌿 STUP</div>
+
                 </div>
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-tabac" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🚬 TABAC</div>
+
                 </div>
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-puff" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🍊 PUFF</div>
+
                 </div>
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-ballon" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🎈 BALLON</div>
+
                 </div>
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-alcool" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">🍾 ALCOOL</div>
+
                 </div>
+
                 <div style="background:rgba(138,43,226,0.15); border:1px solid rgba(138,43,226,0.3); border-radius:12px; padding:12px 6px; text-align:center;">
+
                     <div id="a-total" style="font-size:24px; font-weight:bold; color:#8a2be2;">0</div>
+
                     <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">📦 Total</div>
+
                 </div>
+
             </div>
+
+
 
             <!-- Tabs catégories -->
+
             <div style="display:flex; gap:8px; padding:0 14px 14px;">
+
                 <button class="admin-tab active" onclick="adminSwitchCat('stup',this)">🌿 STUP</button>
+
                 <button class="admin-tab" onclick="adminSwitchCat('tabac',this)">🚬 TABAC</button>
+
                 <button class="admin-tab" onclick="adminSwitchCat('puff',this)">🍊 PUFF</button>
+
                 <button class="admin-tab" onclick="adminSwitchCat('ballon',this)">🎈 BALLON</button>
+
                 <button class="admin-tab" onclick="adminSwitchCat('alcool',this)">🍾 ALCOOL</button>
+
             </div>
 
+
+
             <!-- Bouton ajouter -->
+
             <button onclick="adminAddProduct()" style="display:block; width:calc(100% - 28px); margin:0 14px 14px; padding:14px; background:linear-gradient(135deg,#8a2be2,#5dade2); border:none; border-radius:14px; color:#fff; font-size:15px; font-weight:bold; cursor:pointer;">
+
                 ➕ Ajouter un produit
+
             </button>
 
+
+
             <!-- Liste produits -->
+
             <div id="admin-products-list" style="padding:0 14px; display:grid; gap:10px;"></div>
 
+
+
             <!-- Toast admin -->
+
             <div id="admin-toast" style="position:fixed; bottom:25px; left:50%; transform:translateX(-50%) translateY(120px); background:linear-gradient(135deg,#8a2be2,#5dade2); color:#fff; padding:13px 24px; border-radius:14px; font-size:14px; font-weight:bold; z-index:99999; transition:transform 0.3s; white-space:nowrap;"></div>
+
+
 
         </div><!-- fin admin-main-content -->
 
+
+
         <!-- MODAL FORMULAIRE PRODUIT -->
+
         <div id="product-form-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:10000; overflow-y:auto; padding:15px;">
+
             <div style="background:#12163a; border:2px solid #8a2be2; border-radius:20px; max-width:500px; margin:0 auto; overflow:hidden;">
+
                 
+
                 <!-- Header formulaire -->
+
                 <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 18px; background:rgba(138,43,226,0.2); border-bottom:1px solid rgba(138,43,226,0.3);">
+
                     <h3 id="form-title" style="font-size:16px;">➕ Nouveau produit</h3>
+
                     <button onclick="closeProductForm()" style="background:rgba(255,255,255,0.1); border:none; color:#fff; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:14px;">✕</button>
+
                 </div>
+
+
 
                 <!-- Corps formulaire -->
+
                 <div style="padding:18px; display:grid; gap:16px;">
+
                     <input type="hidden" id="edit-idx">
+
                     <input type="hidden" id="edit-cat-origin">
 
+
+
                     <!-- Catégorie -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">📂 Catégorie</label>
+
                         <div style="display:flex; gap:7px;">
+
                             <button class="admin-select-btn active" data-cat="stup" onclick="selectCat(this)">🌿 STUP</button>
+
                             <button class="admin-select-btn" data-cat="tabac" onclick="selectCat(this)">🚬 TABAC</button>
+
                             <button class="admin-select-btn" data-cat="puff" onclick="selectCat(this)">🍊 PUFF</button>
+
                             <button class="admin-select-btn" data-cat="ballon" onclick="selectCat(this)">🎈 BALLON</button>
+
                             <button class="admin-select-btn" data-cat="alcool" onclick="selectCat(this)">🍾 ALCOOL</button>
+
                         </div>
+
                     </div>
+
+
 
                     <!-- Nom -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">✏️ Nom du produit</label>
+
                         <input type="text" id="f-name" placeholder="Ex: 🍫 DRYSIFT • GELATO 🍦" class="admin-input">
+
                     </div>
+
+
 
                     <!-- Description -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">📝 Description courte</label>
+
                         <input type="text" id="f-desc" placeholder="Ex: Terps explosifs qualité top" class="admin-input">
+
                     </div>
+
+
 
                     <!-- Note -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">⭐ Note</label>
+
                         <div style="display:flex; gap:7px;">
+
                             <button class="admin-rating-btn" onclick="setRating(3)">⭐⭐⭐</button>
+
                             <button class="admin-rating-btn" onclick="setRating(4)">⭐⭐⭐⭐</button>
+
                             <button class="admin-rating-btn active" onclick="setRating(5)">⭐⭐⭐⭐⭐</button>
+
                         </div>
+
                         <input type="hidden" id="f-rating" value="⭐⭐⭐⭐⭐">
+
                     </div>
+
+
 
                     <!-- Détails -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">📋 Détails complets</label>
+
                         <textarea id="f-details" class="admin-textarea" placeholder="Description complète, quantités dispo, prix..."></textarea>
+
                     </div>
+
+
 
                     <!-- Type média -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">🎬 Type de média</label>
+
                         <div style="display:flex; gap:7px;">
+
                             <button class="admin-select-btn active" data-type="video" onclick="selectType(this)">📹 Vidéo</button>
+
                             <button class="admin-select-btn" data-type="image" onclick="selectType(this)">🖼️ Image</button>
+
                         </div>
+
                         <input type="hidden" id="f-type" value="video">
+
                     </div>
+
+
 
                     <!-- Upload -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">📱 Photo/Vidéo depuis galerie iPhone</label>
+
                         <div id="upload-zone" onclick="document.getElementById('file-upload').click()" style="border:2px dashed rgba(138,43,226,0.4); border-radius:12px; padding:20px; text-align:center; cursor:pointer; background:rgba(138,43,226,0.05);">
+
                             <div id="upload-preview">
+
                                 <div style="font-size:32px; margin-bottom:8px;">📁</div>
+
                                 <div style="font-size:13px; color:rgba(255,255,255,0.5); line-height:1.5;">Appuyez pour choisir<br>une photo ou vidéo</div>
+
                             </div>
+
                         </div>
+
                         <input type="file" id="file-upload" accept="image/*,video/*" style="display:none" onchange="handleFileUpload(this)">
+
                         <input type="hidden" id="f-media" value="">
+
                         <div id="upload-status" style="font-size:11px; color:#5dade2; margin-top:6px; text-align:center;"></div>
+
                     </div>
+
+
 
                     <!-- URL manuelle -->
+
                     <div>
+
                         <label style="display:block; font-size:12px; font-weight:bold; color:rgba(255,255,255,0.7); margin-bottom:8px;">🔗 OU chemin manuel</label>
+
                         <input type="text" id="f-media-url" placeholder="videos/stup1.mp4 ou images/puff1.jpg" class="admin-input">
+
                         <p style="font-size:10px; color:rgba(255,255,255,0.35); margin-top:4px;">Ignoré si un fichier est uploadé</p>
+
                     </div>
 
+
+
                 </div>
+
+
 
                 <!-- Actions -->
+
                 <div style="display:flex; gap:10px; padding:16px 18px; border-top:1px solid rgba(138,43,226,0.2);">
+
                     <button onclick="closeProductForm()" style="flex:1; padding:13px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:12px; color:rgba(255,255,255,0.7); font-size:14px; cursor:pointer;">Annuler</button>
+
                     <button onclick="saveProduct()" style="flex:2; padding:13px; background:linear-gradient(135deg,#8a2be2,#5dade2); border:none; border-radius:12px; color:#fff; font-size:14px; font-weight:bold; cursor:pointer;">💾 Enregistrer</button>
+
                 </div>
 
+
+
             </div>
+
         </div><!-- fin product-form-modal -->
+
+
 
     </div><!-- fin admin-panel -->
 
+
+
     <!-- Audio -->
+
     <audio id="bgMusic" loop>
+
         <source src="background-music.mp3" type="audio/mpeg">
+
     </audio>
 
+
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
+
