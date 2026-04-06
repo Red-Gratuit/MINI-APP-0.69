@@ -81,7 +81,7 @@ function loadProducts() {
     } catch (e) {
         console.log('Erreur lecture products.json:', e.message);
     }
-    return { stup: [], tabac: [], puff: [] };
+    return { stup: [], tabac: [], puff: [], ballon: [], alcool: [] };
 }
 
 function saveProducts(data) {

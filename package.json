@@ -1,20 +1,16 @@
 {
 
-  "name": "le-professeur",
+  "name": "shop-09",
 
   "version": "1.0.0",
 
-  "description": "Le Professeur 59-62 - Bot Telegram & Mini App",
+  "description": "Shop 0.9 74700 - Mini App",
 
   "main": "server.js",
 
   "scripts": {
 
     "start": "node server.js",
-
-    "bot": "node bot.js",
-
-    "all": "node server.js & node bot.js",
 
     "build": "echo 'Build complete'"
 
@@ -24,9 +20,7 @@
 
     "express": "^4.18.0",
 
-    "multer": "^1.4.5-lts.1",
-
-    "node-telegram-bot-api": "^0.64.0"
+    "multer": "^1.4.5-lts.1"
 
   },
 
