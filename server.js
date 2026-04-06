@@ -105,8 +105,5 @@ app.post('/api/products', (req, res) => {
     }
 });
 
-// Lancer le bot Telegram dans le même process
-require('./bot.js');
-
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server on port ${PORT}`));
